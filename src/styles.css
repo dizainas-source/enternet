@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&display=swap');
+
+:root { --navy:#003263; --blue:#0080fe; --ground:#f3f6fd; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+html,body { overflow-x:clip; }
+body { margin:0; background:var(--ground); color:var(--navy); font-family:Saira, sans-serif; }
+a { color:inherit; text-decoration:none; }
+.page-shell { min-height:100svh; overflow-x:clip; }
+.site-header { height:104px; padding:24px 60px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:5; }
+.brand { width:180px; height:40px; display:block; }
+.brand img { display:block; width:180px; height:40px; }
+nav { display:flex; align-items:center; gap:48px; font-size:16px; line-height:22px; }
+nav button { font:inherit; }
+.nav-link { padding:12px 0; position:relative; color:var(--navy); border:0; background:transparent; cursor:default; }
+.contact-button { color:#fff; border:0; background:var(--blue); width:180px; height:36px; display:grid; place-items:center; border-radius:4px; font-size:15px; font-weight:600; cursor:default; }
+.contact-button:hover { background:#006cd7; transform:translateY(-1px); }
+.hero { min-height:calc(320svh - 104px); padding:16px 60px 0; display:flex; position:relative; }
+.office-story { position:absolute; z-index:12; left:72%; top:20%; width:min(390px,30%); padding:24px 28px; color:var(--navy); background:var(--ground); border:1px solid rgb(0 50 99 / .12); border-radius:8px; display:none; pointer-events:none; }
+.office-story--visible { display:block; }
+.office-story__eyebrow { color:var(--blue); font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }.office-story h2 { margin:8px 0 10px; font-size:31px; line-height:1.2; }.office-story p { margin:0; font-size:14px; line-height:1.45; }.office-story__lead { max-width:33ch; }
+.office-story__services { margin-top:18px; border-top:1px solid rgb(0 50 99 / .16); }.office-story__services > div { display:grid; grid-template-columns:29px 1fr; gap:10px; padding:11px 0; border-bottom:1px solid rgb(0 50 99 / .12); }.office-story__services span { color:var(--blue); font-size:12px; font-weight:600; }.office-story__services h3 { margin:0 0 3px; font-size:16px; line-height:1.25; }.office-story__services p { font-size:12px; }.office-story small { display:block; margin-top:14px; color:#60758b; font-size:11px; }
+.hero-copy { flex:0 0 min(523px, 32vw); padding-top:80px; position:relative; z-index:2; min-width:0; }
+h1 { margin:0; font-size:70px; font-weight:500; line-height:80px; letter-spacing:-2.8px; }
+h1 span { color:var(--blue); display:block; }
+.office-wrap { flex:1 1 auto; position:relative; min-width:0; }
+.office { width:min(1276.68px, 100%); aspect-ratio:5732 / 3731; position:sticky; top:120px; transform:translate(calc(var(--scroll-progress) * -13vw),calc(var(--scroll-progress) * var(--office-center-y))) scale(calc(1 + var(--scroll-progress) * (var(--office-fit-scale) - 1))); transform-origin:center center; will-change:transform; }
+@media (max-width:1180px) { .site-header { padding-inline:32px; } nav { gap:20px; } .hero { padding-inline:32px; } .hero-copy { flex-basis:38vw; } h1 { font-size:56px; line-height:66px; } }
+@media (max-width:800px) { .site-header { height:auto; padding:20px 22px; } .nav-link { display:none; } nav { gap:0; } .contact-button { width:126px; } .hero { padding:8px 22px 36px; min-height:320svh; display:block; } .hero-copy { padding-top:42px; min-width:0; } h1 { font-size:47px; line-height:54px; letter-spacing:-1.9px; } .office-wrap { min-width:0; margin:26px 0 0; height:220svh; } .office { width:100%; max-width:none; right:0; top:38px; transform:scale(calc(1 + var(--scroll-progress) * .04)); } }
+@media (max-width:430px) { .brand,.brand img { width:145px; height:auto; } h1 { font-size:40px; line-height:47px; } .office { width:100%; right:0; } }
+@media (max-width:800px) { .office-story { left:5%; top:75%; width:90%; padding:16px; }.office-story h2 { font-size:24px; }.office-story__services { margin-top:12px; }.office-story__services > div { padding:8px 0; } }
