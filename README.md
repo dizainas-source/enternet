@@ -27,12 +27,12 @@ Open [http://localhost:8080](http://localhost:8080).
 Git tracks your code locally. GitHub receives it only after you explicitly push.
 
 ```bash
-# First time only, after creating an empty GitHub repository named enternet-2026
+# First time only, after creating an empty GitHub repository named enternet
 git init
 git add .
 git commit -m "Initial project setup"
 git branch -M main
-git remote add origin https://github.com/dizainas-source/enternet-2026.git
+git remote add origin https://github.com/dizainas-source/enternet.git
 git push -u origin main
 ```
 
